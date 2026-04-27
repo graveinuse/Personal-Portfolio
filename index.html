@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satya Praneeth | Developer & Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">SP<span>.</span>Mallipam</a>
+  <div style="display:flex;gap:1.5rem;align-items:center;">
+    <a href="#about" style="color:var(--muted);font-size:0.85rem;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-family:'Space Mono',monospace;transition:color 0.2s;" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'">About</a>
+    <a href="#projects" style="color:var(--muted);font-size:0.85rem;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-family:'Space Mono',monospace;transition:color 0.2s;" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'">Projects</a>
+    <a href="#contact" style="color:var(--muted);font-size:0.85rem;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-family:'Space Mono',monospace;transition:color 0.2s;" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'">Contact</a>
+    <div class="badge">Portfolio Portal</div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header" style="align-items: center;">
+    <div>
+      <h1 class="page-title">
+        Hello, I'm<br/>
+        <span class="highlight">Satya Praneeth</span>
+      </h1>
+      <p class="subtitle">Satya Praneeth Mallipam — Data Analsyt</p>
+    </div>
+    <div style="position: relative; display: inline-block;">
+      <div class="hello-popup">Hello <span class="wave-hand">👋</span></div>
+      <div style="width: 150px; height: 150px; border: 2px solid var(--accent); border-radius: 50%; overflow: hidden; position: relative; z-index: 1; background: var(--surface);">
+         <img src="satya.jpg" alt="Profile" style="width: 100%; height: 100%; object-fit: cover; ">
+      </div>
+    </div>
+  </div>
+
+  <div class="stats scroll-anim">
+    <div class="stat"><div class="stat-val">3+</div><div class="stat-label">Major Projects</div></div>
+    <div class="stat"><div class="stat-val">Python</div><div class="stat-label">Primary Stack</div></div>
+    <div class="stat"><div class="stat-val">Data Analyst</div><div class="stat-label">Specialization</div></div>
+  </div>
+
+  <div class="controls scroll-anim" id="about">
+    <div style="flex:1;">
+      <h2 style="font-family:'Syne',sans-serif; font-size: 1.5rem; color:var(--accent);">About <span style="color:var(--accent2);">Me</span></h2>
+    </div>
+    <a href="assets/SATYA_PRANEETH_MALLIPAM.pdf" class="btn outline" download>Download CV</a>
+  </div>
+  
+  <div class="stat scroll-anim" style="margin-bottom: 3rem; padding: 3rem;">
+    <p style="font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; text-align: justify;">Driven by an insatiable curiosity and a fervent passion for continuous learning, I am deeply committed to advancing my expertise in data analysis through pursuing a Master's degree. With a steadfast dedication to personal and professional growth, I eagerly embrace the opportunity to immerse myself in advanced coursework, hands-on research, and collaborative projects that deepen my understanding of complex data sets and analytical techniques.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; font-size: 0.85rem;">
+      <div><strong style="color:var(--accent2); text-transform:uppercase; font-size:0.7rem;">Location</strong><br/>Kent, Ohio</div>
+      <div><strong style="color:var(--accent2); text-transform:uppercase; font-size:0.7rem;">Email</strong><br/>satyapraneethm@gmail.com</div>
+      <div><strong style="color:var(--accent2); text-transform:uppercase; font-size:0.7rem;">Degree</strong><br/>M.S. Data Science</div>
+    </div>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="page-header scroll-anim" id="projects" style="margin-top: 2rem; margin-bottom: 1.5rem;">
+     <div>
+      <h1 class="page-title" style="font-size: 2.5rem;">My <span class="highlight" style="background:var(--accent3); color:#fff; padding:0 10px;">Projects</span></h1>
+      <p class="subtitle">sp.mallipam.projects — curated works</p>
+    </div>
+  </div>
+
+  <div class="controls scroll-anim">
+    <input class="search-box" id="searchInput" type="text" placeholder="Search by name, tech..."/>
+    <select class="dept-filter" id="techFilter">
+      <option value="">All Technologies</option>
+      <option value="ML">Machine Learning</option>
+      <option value="Data">Data Analysis</option>
+      <option value="Web">Web Dev</option>
+    </select>
+  </div>
+
+  <div class="table-wrapper scroll-anim">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Project Title</th>
+          <th>Domain</th>
+          <th>Key Tech</th>
+          <th>Impact/Result</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="projectsBody">
+         <tr class="project-row" data-tech="ML Machine Learning Python XGBoost Web">
+            <td><span class="id-tag">01</span></td>
+            <td style="font-weight: 700;">Business Feasibility Prediction</td>
+            <td><span class="dept-chip" style="border-color:#457b9d;color:#457b9d">Machine Learning</span></td>
+            <td style="font-size: 1.1rem;">Python, XGBoost, ETL</td>
+            <td style="color:var(--accent3); font-weight:700;">87.1% Acc. across 865 Cities</td>
+            <td>
+              <div class="action-btns">
+                 <button class="icon-btn" onclick="showProjectDetails('p1')">Details</button>
+              </div>
+            </td>
+         </tr>
+         <tr class="project-row" data-tech="Healthcare AI Data Science Machine Learning Python SQL R AWS">
+            <td><span class="id-tag">02</span></td>
+            <td style="font-weight: 700;">Premature Birth Prediction</td>
+            <td><span class="dept-chip" style="border-color:#e63946;color:#e63946">Healthcare AI</span></td>
+            <td style="font-size: 1.1rem;">H2O, Python, AWS</td>
+            <td style="color:var(--accent3); font-weight:700;">+29% over Clinical Methods</td>
+            <td>
+              <div class="action-btns">
+                 <button class="icon-btn" onclick="showProjectDetails('p2')">Details</button>
+              </div>
+            </td>
+         </tr>
+         <tr class="project-row" data-tech="Data Analysis Tableau R D3.js SQL Web">
+            <td><span class="id-tag">03</span></td>
+            <td style="font-weight: 700;">Behavioral Pattern Recognition</td>
+            <td><span class="dept-chip" style="border-color:#f4a261;color:#f4a261">Data Analysis</span></td>
+            <td style="font-size: 1.1rem;">Tableau, D3.js</td>
+            <td style="color:var(--accent3); font-weight:700;">20K+ Records Analyzed</td>
+            <td>
+              <div class="action-btns">
+                 <button class="icon-btn" onclick="showProjectDetails('p3')">Details</button>
+              </div>
+            </td>
+         </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div style="margin-top: 4rem;"></div>
+  
+  <div class="page-header scroll-anim" id="contact" style="margin-bottom: 1.5rem;">
+     <div>
+      <h1 class="page-title" style="font-size: 2.5rem;">Get in <span class="highlight" style="background:var(--accent2); color:#fff; padding:0 10px;">Touch</span></h1>
+    </div>
+  </div>
+
+  <div class="stat scroll-anim" style="padding: 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div>
+           <h3 style="font-family:'Syne',sans-serif; color:var(--accent); font-size:1.2rem; margin-bottom:1rem;">Contact Info</h3>
+           <p style="font-size:1.1rem; color:var(--muted); margin-bottom: 0.8rem;"><i class="fas fa-map-marker-alt"></i> Kent, Ohio, USA</p>
+           <p style="font-size:1.1rem; color:var(--muted); margin-bottom: 0.8rem;"><i class="fas fa-envelope"></i> satyapraneethm@gmail.com</p>
+           <p style="font-size:1.1rem; color:var(--muted); margin-bottom: 0.8rem;"><i class="fas fa-phone"></i> +1 (234) 296-3979</p>
+           <div style="margin-top: 1rem; display:flex; gap: 0.5rem;">
+               <a href="https://github.com/graveinuse" class="icon-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+               <a href="https://www.linkedin.com/in/satya-praneeth-mallipam-b4397126a/" class="icon-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+           </div>
+        </div>
+        <div>
+           <form class="contact-form form-grid" id="ajaxContactForm">
+             <div class="form-group full">
+               <label>Your Name</label>
+               <input type="text" id="cName" name="name" required placeholder="John Doe" />
+             </div>
+             <div class="form-group full">
+               <label>Email Address</label>
+               <input type="email" id="cEmail" name="email" required placeholder="john@example.com" />
+             </div>
+             <div class="form-group full">
+               <label>Message</label>
+               <textarea id="cMessage" name="message" required rows="4" style="background:var(--surface); border: 2px solid var(--border); color:var(--text); font-family:'Space Mono',monospace; font-size:0.78rem; padding:0.6rem 0.8rem; outline:none; transition: border-color 0.2s; width:100%; resize:vertical;" placeholder="Let's work together..."></textarea>
+             </div>
+             <div class="form-group full" style="align-items: flex-end;">
+               <button type="submit" class="btn">Send Message</button>
+             </div>
+           </form>
+        </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 3rem; font-size: 1rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">
+     &copy; 2025 Satya Praneeth Mallipam. All Rights Reserved.
+  </div>
+
+</main>
+
+<!-- Modal for Project Details -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-title" id="modalTitle">Project Details</div>
+    <div class="form-grid" id="modalContent" style="font-size: 0.8rem;">
+       <!-- content -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn outline" onclick="closeModal()">Close Details</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Message Sent Successfully!</div>
+
+<script src="script.js"></script>
+</body>
+</html>

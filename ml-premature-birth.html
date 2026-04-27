@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premature Birth Prediction | Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">SP<span>.</span>Mallipam</a>
+  <div style="display:flex;gap:1.5rem;align-items:center;">
+    <a href="index.html#projects" style="color:var(--muted);font-size:0.85rem;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-family:'Space Mono',monospace;transition:color 0.2s;" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'">← Back to Projects</a>
+    <div class="badge">Project Case Study</div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header scroll-anim" style="align-items: flex-end;">
+    <div>
+      <h1 class="page-title">
+        Premature Birth<br/>
+        <span class="highlight">Prediction ML</span>
+      </h1>
+      <p class="subtitle">sp.mallipam.projects.p2 — healthcare AI model</p>
+    </div>
+  </div>
+
+  <div class="stats scroll-anim">
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">2023-2024</div><div class="stat-label">Timeline</div></div>
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">11,000+</div><div class="stat-label">Records Analyzed</div></div>
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">98.7%</div><div class="stat-label">Ensemble Accuracy</div></div>
+  </div>
+
+  <div class="stat scroll-anim" style="margin-bottom: 2rem; padding: 3rem;">
+    <h2 style="font-family:'Syne',sans-serif; color:var(--accent); font-size:1.8rem; margin-bottom:1rem;">Overview</h2>
+    <p style="font-size:1rem; line-height: 1.8; margin-bottom: 2rem; text-align: justify;">A robust machine learning solution trained on over 11,000 real-world pregnancy records. The system utilizes both lab analytics and clinical scan parameters to accurately predict preterm birth risks, providing medical practitioners with early-warning clinical scoring systems to support preventative care.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div>
+            <h3 style="font-family:'Syne',sans-serif; color:var(--accent2); font-size:1.2rem; margin-bottom:0.8rem;">Methodology</h3>
+            <ul style="font-size:0.9rem; line-height:1.6; color:var(--text); list-style-position: outside; margin-left: 1rem; margin-bottom:1.5rem;">
+                <li style="margin-bottom:0.3rem;">Extracted data from RBC, WBC, TSH, CRL, and Placenta positions.</li>
+                <li style="margin-bottom:0.3rem;">Evaluated baseline models: Logistic Regression, Naive Bayes.</li>
+                <li style="margin-bottom:0.3rem;">Applied advanced ensemble architectures (Random Forest, XGBoost).</li>
+                <li>Achieved a culminating ensemble model with 98.7% accuracy.</li>
+            </ul>
+        </div>
+        <div>
+            <h3 style="font-family:'Syne',sans-serif; color:var(--accent2); font-size:1.2rem; margin-bottom:0.8rem;">Impact & Results</h3>
+            <p style="font-size:0.9rem; line-height:1.6; color:var(--text); margin-bottom:1.5rem;">High accuracy predictions identify at-risk patients up to the 35th week of pregnancy, shifting treatment paradigms from reactive to proactive intervention. The solution ultimately supports doctors in reducing infant mortality rates tied to preterm complications.</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+        <h3 style="font-family:'Syne',sans-serif; color:var(--accent); font-size:1.2rem; margin-bottom:0.8rem;">Technologies</h3>
+        <p style="font-size:0.9rem; margin-bottom: 0.5rem;"><strong style="color:var(--accent2);">Languages & Frameworks:</strong> Python (Flask, Pandas, Scikit-learn), HTML5, CSS3, Bootstrap 4, JS</p>
+        <p style="font-size:0.9rem;"><strong style="color:var(--accent2);">Environment:</strong> Jupyter Notebook, Distributed Web Application Environment</p>
+    </div>
+  </div>
+
+  <div class="controls scroll-anim" style="justify-content: space-between;">
+      <span class="dept-chip" style="border-color:var(--muted); color:var(--muted); font-size: 0.8rem;">Presented at FICTA-2024 (Springer, London Metropolitan University)</span>
+      <a href="index.html#projects" class="btn outline">Return to Projects</a>
+  </div>
+  
+  <div style="text-align: center; margin-top: 3rem; font-size: 1rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">
+     &copy; 2025 Satya Praneeth Mallipam. All Rights Reserved.
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Business Feasibility Prediction System (BFPS) — an AI-powered decision support system that predicts business success, ROI, payback period, and seasonality using Census, BLS, Yelp, and NOAA data." />
+  <title>BFPS | Business Feasibility Prediction System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">SP<span>.</span>Mallipam</a>
+  <div style="display:flex;gap:1.5rem;align-items:center;">
+    <a href="index.html#projects" style="color:var(--muted);font-size:0.85rem;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;font-family:'Space Mono',monospace;transition:color 0.2s;" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='var(--muted)'">← Back to Projects</a>
+    <div class="badge">Project Case Study</div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header scroll-anim" style="align-items: flex-end;">
+    <div>
+      <h1 class="page-title">
+        Business Feasibility<br/>
+        <span class="highlight">Prediction System</span>
+      </h1>
+      <p class="subtitle">sp.mallipam.projects.p1 — ai-powered decision support</p>
+    </div>
+  </div>
+
+  <div class="stats scroll-anim">
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">107,380</div><div class="stat-label">Yelp Businesses</div></div>
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">865</div><div class="stat-label">Cities Analyzed</div></div>
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">4</div><div class="stat-label">Data Sources</div></div>
+    <div class="stat"><div class="stat-val" style="font-size:1.5rem;">89%</div><div class="stat-label">XGBoost Accuracy</div></div>
+  </div>
+
+  <div class="stat scroll-anim" style="margin-bottom: 2rem; padding: 3rem;">
+    <h2 style="font-family:'Syne',sans-serif; color:var(--accent); font-size:1.8rem; margin-bottom:1rem;">Overview</h2>
+    <p style="font-size:1rem; line-height: 1.8; margin-bottom: 2rem; text-align: justify;"><strong>BFPS</strong> leverages machine learning and multi-source public data (U.S. Census, BLS, Yelp, NOAA) to help entrepreneurs make data-driven decisions. It outputs a composite <strong>Feasibility Index (0–1)</strong> by predicting 2-year survival probability, ROI, payback period, and seasonality.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div>
+            <h3 style="font-family:'Syne',sans-serif; color:var(--accent2); font-size:1.2rem; margin-bottom:0.8rem;">The Problem</h3>
+            <p style="font-size:0.9rem; line-height:1.6; color:var(--text); margin-bottom:1.5rem;">Many small businesses fail due to insufficient market feasibility assessment. BFPS addresses this gap with a measurable feasibility score built on authoritative datasets, bypassing gut intuition.</p>
+        </div>
+        <div>
+            <h3 style="font-family:'Syne',sans-serif; color:var(--accent2); font-size:1.2rem; margin-bottom:0.8rem;">The Solution</h3>
+            <ul style="font-size:0.9rem; line-height:1.6; color:var(--text); list-style-position: outside; margin-left: 1rem; margin-bottom:1.5rem;">
+                <li style="margin-bottom:0.4rem;">Success Probability (2-year survival) via XGBoost.</li>
+                <li style="margin-bottom:0.4rem;">ROI Forecast via Gradient Boosting.</li>
+                <li style="margin-bottom:0.4rem;">Payback Period via Random Forest.</li>
+                <li>Seasonality Timing via Prophet + NOAA climate features.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <div class="stat scroll-anim" style="margin-bottom: 2rem; padding: 3rem;">
+    <h2 style="font-family:'Syne',sans-serif; color:var(--accent); font-size:1.8rem; margin-bottom:1rem;">Architecture & Models</h2>
+    <p style="font-size:1rem; line-height: 1.8; margin-bottom: 2rem; text-align: justify;">A robust 5-Layer architecture pipelines user inputs through data integration, ML modeling, feasibility scoring, and UX generation (Dashboard, CLI, API).</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div>
+            <h3 style="font-family:'Syne',sans-serif; color:var(--accent2); font-size:1.2rem; margin-bottom:0.8rem;">Scoring Engine</h3>
+            <p style="font-family:'Space Mono', monospace; font-size:0.8rem; background:var(--surface); border:1px solid var(--border); padding:1.2rem; line-height:1.6; color:var(--accent);">
+                Feasibility Index = <br>
+                &nbsp;&nbsp;0.35 × ROI Prediction<br>
+                + 0.25 × Success Probability<br>
+                + 0.20 × Payback Period<br>
+                + 0.20 × Seasonality
+            </p>
+        </div>
+        <div>
+            <h3 style="font-family:'Syne',sans-serif; color:var(--accent2); font-size:1.2rem; margin-bottom:0.8rem;">Machine Learning Results</h3>
+            <ul style="font-size:0.9rem; line-height:1.6; color:var(--text); list-style-position: outside; margin-left: 1rem;">
+                <li style="margin-bottom:0.4rem;"><strong>XGBoost:</strong> 89% Accuracy, 87% Precision.</li>
+                <li style="margin-bottom:0.4rem;"><strong>Gradient Boosting (ROI):</strong> R² of 0.986, MAE 1.89%.</li>
+                <li style="margin-bottom:0.4rem;"><strong>Random Forest (Payback):</strong> R² of 0.981.</li>
+                <li><strong>Prophet:</strong> Signals extracted from NOAA.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+        <h3 style="font-family:'Syne',sans-serif; color:var(--accent); font-size:1.2rem; margin-bottom:0.8rem;">Tech Stack</h3>
+        <p style="font-size:0.9rem; margin-bottom: 0.5rem;"><strong style="color:var(--accent2);">Data & ML:</strong> Python, SQL, XGBoost, Random Forest, Prophet</p>
+        <p style="font-size:0.9rem;"><strong style="color:var(--accent2);">Delivery:</strong> Tableau, D3.js, FastAPI/CLI, AWS</p>
+    </div>
+  </div>
+
+  <div class="controls scroll-anim" style="justify-content: space-between;">
+      <a href="https://github.com/graveinuse" target="_blank" class="btn"><i class="fab fa-github" style="margin-right: 0.5rem;"></i> View Source</a>
+      <a href="index.html#projects" class="btn outline">Return to Projects</a>
+  </div>
+  
+  <div style="text-align: center; margin-top: 3rem; font-size: 1rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">
+     &copy; 2025 Satya Praneeth Mallipam. All Rights Reserved.
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
