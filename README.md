@@ -1,6 +1,6 @@
 # 👨‍💻 Satya Praneeth | Data Science Portfolio
 
-> A dynamic, fully-responsive professional portfolio built with a brutalist "Genesis" dashboard aesthetic to showcase high-impact Machine Learning and Data Analytics capstone projects.
+> A dynamic, fully-responsive professional portfolio built to showcase high-impact Machine Learning and Data Analytics capstone projects.
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
